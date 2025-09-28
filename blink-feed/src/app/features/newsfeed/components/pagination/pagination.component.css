@@ -1,0 +1,15 @@
+.pagination {
+  flex-wrap: wrap;
+}
+
+.page-link {
+  color:black;
+  min-width: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.page-item.disabled .page-link {
+  pointer-events: none;
+  opacity: 0.6;
+}

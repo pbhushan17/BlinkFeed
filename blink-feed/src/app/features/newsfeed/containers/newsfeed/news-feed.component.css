@@ -1,0 +1,40 @@
+.nav-pills .nav-link {
+  cursor: pointer;
+  color: black;
+  border-radius: 50px;
+  padding: 0.4rem 1.2rem;
+  margin: 0.25rem;
+  transition: background-color 0.2s ease;
+}
+
+.nav-pills .nav-link.active {
+  background-color: rgb(255, 102, 0);
+  color: #fff;
+}
+
+.fullscreen-loader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 1050;
+}
+
+.pagination {
+  flex-wrap: wrap;
+}
+
+.page-link {
+  color:black;
+  min-width: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.page-item.disabled .page-link {
+  pointer-events: none;
+  opacity: 0.6;
+}

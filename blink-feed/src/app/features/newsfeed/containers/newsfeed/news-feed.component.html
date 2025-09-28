@@ -1,0 +1,45 @@
+<div class="container">
+  <ng-template #loading>
+    <div class="fullscreen-loader">
+      <div class="spinner-border" role="status" style="width: 4rem; height: 4rem;">
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template #feed>
+    <ul class="nav nav-pills mb-3 justify-content-center">
+      <li class="nav-item">
+        <a
+        class="nav-link"
+        [class.active]="activeFeed === 'topstories'"
+        (click)="switchFeed('topstories')">Top</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+        [class.active]="activeFeed === 'newstories'"
+        (click)="switchFeed('newstories')">New</a>
+      </li>
+      <li class="nav-item">
+        <a
+        class="nav-link"
+        [class.active]="activeFeed === 'beststories'"
+        (click)="switchFeed('beststories')">Best</a>
+      </li>
+    </ul>
+
+    <app-news-card
+      *ngFor="let story of (newsStore.newsItems$ | async)"
+      [story]="story">
+    </app-news-card>
+
+    <app-pagination
+      [currentPage]="newsStore.currentPage"
+      [totalPages]="newsStore.totalPages"
+      (pageChange)="loadPage($event)">
+    </app-pagination>
+  </ng-template>
+
+  <ng-container *ngIf="newsStore.loading$ | async; else feed">
+    <ng-container *ngTemplateOutlet="loading"></ng-container>
+  </ng-container>
+</div>

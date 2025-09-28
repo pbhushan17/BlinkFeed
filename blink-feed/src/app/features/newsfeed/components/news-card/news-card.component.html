@@ -1,0 +1,14 @@
+<div class="card mb-3">
+  <div class="card-body">
+    <h5 class="card-title">
+      <a [href]="story.url" target="_blank" class="text-decoration-none card-title">
+        {{ story.title }}
+      </a>
+    </h5>
+    <p class="card-text">
+      <small class="text-muted">
+        {{ story.score }} points by <strong>{{ story.by }}</strong> {{ story.time | time }} {{ story.descendants | comment }}
+      </small>
+    </p>
+  </div>
+</div>
