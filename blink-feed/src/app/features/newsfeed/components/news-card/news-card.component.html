@@ -1,7 +1,7 @@
 <div *ngIf="story.title" class="card mb-3">
   <div class="card-body">
     <h5 class="card-title">
-      <a [href]="story.url" target="_blank" class="text-decoration card-title">
+      <a [href]="story.url" [title]="story.url" target="_blank" class="text-decoration card-title">
         {{ story.title }}
       </a>
     </h5>
