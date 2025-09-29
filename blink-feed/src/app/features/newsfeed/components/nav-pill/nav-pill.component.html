@@ -1,0 +1,17 @@
+<ul class="nav nav-pills mb-3 justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link"
+      [class.active]="activeFeed === 'topstories'"
+      (click)="selectFeed('topstories')">Top</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link"
+      [class.active]="activeFeed === 'newstories'"
+      (click)="selectFeed('newstories')">New</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link"
+      [class.active]="activeFeed === 'beststories'"
+      (click)="selectFeed('beststories')">Best</a>
+  </li>
+</ul>

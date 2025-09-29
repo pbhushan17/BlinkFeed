@@ -14,13 +14,11 @@ export class NewsStoreService {
   private loadingSubject = new BehaviorSubject<boolean>(false);
   loading$ = this.loadingSubject.asObservable();
 
-
   private ids: number[] = []
-  currentPage:number = 1;
   private readonly pageSize = APP_CONSTANTS.pageSize;
+  currentPage:number = APP_CONSTANTS.intialPage;
 
   constructor(private newsService: NewsService) {}
-
 
   loadStories(storyType: StoryType, page: number) {
     this.newsItemsSubject.next([]);
@@ -35,10 +33,12 @@ export class NewsStoreService {
 
   loadStoryPage(page: number) {
     const pageNumber = Number(page);
+
     if(pageNumber > this.totalPages){
       this.newsItemsSubject.next([]);
       return;
     }
+
     this.loadingSubject.next(true);
     this.currentPage = pageNumber;
 

@@ -19,7 +19,7 @@ describe('NewsFeedComponent', () => {
     router = { navigate: jest.fn() };
 
     await TestBed.configureTestingModule({
-      imports: [NewsFeedComponent], // standalone component
+      imports: [NewsFeedComponent],
       providers: [
         { provide: NewsStoreService, useClass: MockNewsStoreService },
         { provide: Router, useValue: router },

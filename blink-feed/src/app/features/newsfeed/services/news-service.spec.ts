@@ -32,25 +32,25 @@ describe('NewsService', () => {
   });
 
   it('should call API and fetch a NewsItem', () => {
-    const mockItem: NewsItem = {
+    const mockStory: NewsItem = {
       id: 1,
-      title: 'Test',
+      title: 'Test Story',
+      url: 'https://testStory.com',
+      by: 'bhushan',
+      time: 1234567890,
       type: 'story',
-      by: 'author',
-      time: 123456,
-      url: 'http://example.com',
-      score: 10,
-      descendants: 5,
+      score: 17,
+      descendants: 9,
       kids: []
     };
 
     service.getItem(1).subscribe(item => {
-      expect(item).toEqual(mockItem);
+      expect(item).toEqual(mockStory);
     });
 
     const req = httpMock.expectOne(`${API_CONSTANTS.HACKER_NEWS_API}/item/1.json`);
     expect(req.request.method).toBe('GET');
-    req.flush(mockItem);
+    req.flush(mockStory);
   });
 
   it('should call API and fetch story IDs by type', () => {

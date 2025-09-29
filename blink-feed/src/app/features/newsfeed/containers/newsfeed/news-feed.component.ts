@@ -5,11 +5,12 @@ import { APP_CONSTANTS, STORY_TYPES, StoryType } from '../../../../app.constants
 import { NewsCardComponent } from '../../components/news-card/news-card.component';
 import { ActivatedRoute, Router  } from '@angular/router';
 import { PaginationComponent } from '../../components/pagination/pagination.component';
+import { NavPillComponent } from '../../components/nav-pill/nav-pill.component';
 
 @Component({
   selector: 'app-news-feed',
   standalone: true,
-  imports: [CommonModule, NewsCardComponent, PaginationComponent],
+  imports: [CommonModule, NewsCardComponent, PaginationComponent, NavPillComponent],
   templateUrl: './news-feed.component.html',
   styleUrl: './news-feed.component.css'
 })

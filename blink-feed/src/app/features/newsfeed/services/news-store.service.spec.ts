@@ -1,19 +1,19 @@
 import { TestBed } from '@angular/core/testing';
-
 import { NewsStoreService } from './news-store.service';
 import { NewsService } from './news-service';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { provideHttpClient } from '@angular/common/http';
 import { of } from 'rxjs';
+import { NewsItem } from '../models/news-item.model';
 
 describe('NewsStoreService', () => {
   let service: NewsStoreService;
   let newsService: jest.Mocked<NewsService>;
   let httpMock: HttpTestingController;
 
-  const mockStories = [
-    { id: 1, title: 'Story 1' } as any,
-    { id: 2, title: 'Story 2' } as any
+  const mockStories : NewsItem[] = [
+    { id: 1, title: 'Story 1', type: 'story', by: 'author1', time: 123, url: 'https://teststory1.com', score: 10, descendants: 5, kids: [] },
+    { id: 2, title: 'Story 2', type: 'story', by: 'author2', time: 456, url: 'https://teststory2.com', score: 20, descendants: 4, kids: [] }
   ];
 
   beforeEach(() => {

@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { NewsCardComponent } from './news-card.component';
 import { NewsItem } from '../../models/news-item.model';
 
@@ -10,12 +9,12 @@ describe('NewsCardComponent', () => {
   const mockStory: NewsItem = {
     id: 1,
     title: 'Test Story',
-    url: 'https://example.com',
-    by: 'author',
+    url: 'https://testStory.com',
+    by: 'bhushan',
     time: 1234567890,
     type: 'story',
-    score: 10,
-    descendants: 5,
+    score: 17,
+    descendants: 9,
     kids: []
   };
 
