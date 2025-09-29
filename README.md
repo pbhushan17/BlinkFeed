@@ -8,7 +8,7 @@ First clone the repository from Git using the following command: git clone https
 If Node.js v18.19.0 or higher is not installed on your system, please download and install it from: https://nodejs.org/en/download
 Once Node.js is installed, install the Angular CLI by running: npm i -g @angular/cli@18.2.12
 
-Naviagte to root directory and run 'npm i' to install all the dependencies of the project.
+Naviagte to root directory(cd BlinkFeed\blink-feed) and run 'npm i' to install all the dependencies of the project.
 
 # Development server
 Once installation is complete run 'npm start' to run application on dev server. Navigate to `http://localhost:4200/`.
