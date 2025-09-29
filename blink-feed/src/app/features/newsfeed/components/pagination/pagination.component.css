@@ -3,13 +3,16 @@
 }
 
 .page-link {
-  color:black;
+  color: #000;
   min-width: 40px;
   text-align: center;
   cursor: pointer;
 }
 
 .page-item.disabled .page-link {
+  color: #6c757d;
   pointer-events: none;
-  opacity: 0.6;
+  opacity: 1;
+  background-color: #fff;
+  border-color: #dee2e6;
 }
